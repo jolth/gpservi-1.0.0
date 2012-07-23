@@ -6,14 +6,33 @@
     Autor   : Jorge A. Toro
     email   : jolthgs@gmail.com, jolth@esdebian.org
     date    : vie jul 20 07:49:38 COT 2012
-    version : 0.1.9
+    version : 1.0.0
 
     Usage:
+        >>> import datetime
+        >>> import Event.captureEvent
+        >>>
+        >>>data = {'codEvent': '06', 'weeks': '1693', 'dayWeek': '4', 'ageData': '2', 'position': '(4.81534,-75.69489)', \
+        'type': 'R', 'address': '127.0.0.1,45840', 'geocoding': u'RUEDA MILLONARIA PEREIRA, Calle 18 # CARRERA 7, Pereira, Colombia',\ 
+        'data': '>REV061693476454+0481534-0756948900102632;ID=ANT051<', 'course': '026', 'gpsSource': '3', 'time': '76454', 'lat': '4.81534', \
+        'typeEvent': 'EV', 'lng': '-75.69489', 'datetime': datetime.datetime(2012, 7, 23, 7, 31, 26, 608343), 'speed': 1.0, 'id': 'ANT051', 'altura': None}
+        >>> 
+        >>> event = Event.captureEvent.parseEvent(data)
+        INSERT: event6
+        Insert Positions_gps
+        procpid: 3729
+        RETURN: 88 5
+        Insert Eventos
+        Actualizando y Cerranda la conexión
+        >>> 
+        >>> event
+        'Start'
+        >>> 
 
 """
 import sys
 import traceback
-#import datetime
+
 
 def insertEvent(evento): 
     def insert(data):
