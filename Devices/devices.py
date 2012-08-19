@@ -76,7 +76,7 @@ class ANTDevice(Device):
             # Realizamos la Geocodificación. Tratar de no hacer esto
             # es mejor que se realize por cada cliente con la API de GoogleMap
             self["geocoding"] = None 
-            self["geocoding"] = json.loads(Location.geomapgoogle.regeocode('%s,%s' % (self["lat"], self["lng"])))[1]
+            self["geocoding"] = json.loads(Location.geomapgoogle.regeocode('%s,%s' % (self["lat"], self["lng"])))[0]
 
         except: print(sys.exc_info()) #sys.stderr.write('Error Inesperado:', sys.exc_info())
         finally: dataFile.close()
