@@ -13,11 +13,10 @@
 
 import sys
 from ConfigParser import *
-#import os
+import os
 
-#os.chdir('../')
-#_ConfigFile = os.getcwd() + '/config.cfg'
-_ConfigFile = 'config.cfg'
+#_ConfigFile = 'config.cfg'
+_ConfigFile = os.getcwd() + '/config.cfg'
 
 
 def load(section, option, archive=_ConfigFile):
