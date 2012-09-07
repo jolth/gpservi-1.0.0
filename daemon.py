@@ -95,7 +95,7 @@ class DaemonUDP:
         rawData = Devices.devices.getTypeClass(data, address) # retorna la data analizada en un diccionario
         
         if not rawData.has_key('id'): # Si la trama no tiene ID 
-            print >> sys.stdout, rawData, '\n'
+            print >> sys.stdout, rawData#, '\n'
             return # Termina de ejecutar el hilo
 
         print rawData # Imprime la data procesada (Print de Prueba)

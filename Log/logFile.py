@@ -44,8 +44,9 @@ def logFile(arch, endFile=0, **data):
 
     """
     import time
+    import codecs
 
-    with open(arch, 'a+') as f:
+    with codecs.open(arch, 'a+', 'utf-8') as f:
         f.seek(endFile)
         print >> f, ("%(id)s" % data['raw']).ljust(8), \
         ("%(address)s" % data['raw']).ljust(26), \
